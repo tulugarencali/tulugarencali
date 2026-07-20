@@ -990,6 +990,20 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
 
 
 <script>
+// Compartir propiedad por WhatsApp
+function compartirPropiedad(nombre, zona, precio, propId) {
+  const texto = `Hola! Te comparto esta propiedad de Tu Lugar en Cali:
+
+• *${nombre}*
+• ${zona}
+• ${precio}
+
+Más info y fotos aquí: https://tulugarencali.com/propiedades.html#prop-${propId}`;
+  const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(texto)}`;
+  window.open(url, '_blank');
+}
+</script>
+<script>
 // Precargar todas las imágenes de los carruseles para que el cambio sea instantáneo
 window.addEventListener('load', () => {
   const allArrays = [melendezFotos, santaAnitaFotos, loteFotos, ciudad2000Fotos, jamundiFotos, tequendamaFotos, alferezFotos, praderaFotos, campestreFotos, ellidoFotos];
