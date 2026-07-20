@@ -55,11 +55,20 @@ body{background:var(--black);color:var(--white);font-family:var(--sans);font-wei
 }
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,176,116,.08);}
+nav{position:sticky;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,176,116,.08);}
 .nav-logo{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;}
 .nav-links{display:flex;gap:2.5rem;list-style:none;}
 .nav-links a{color:var(--white-muted);text-decoration:none;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;transition:color .3s;}
 .nav-links a:hover{color:var(--gold);}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:28px;height:22px;background:none;border:none;cursor:pointer;padding:0;z-index:200;position:relative;}
+.nav-toggle span{display:block;height:1px;width:100%;background:var(--gold);transition:transform .3s,opacity .3s;}
+.nav-toggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.mobile-menu{display:none;flex-direction:column;align-items:center;gap:1.8rem;background:rgba(10,10,10,.98);border-bottom:1px solid rgba(201,176,116,.15);padding:0;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;position:sticky;top:0;z-index:99;}
+.mobile-menu a{color:var(--white-muted);text-decoration:none;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;}
+.mobile-menu a:hover{color:var(--gold);}
+.mobile-menu.open{max-height:400px;padding:2rem 1.5rem;}
 .nav-cta{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:.6rem 1.6rem;font-family:var(--sans);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .3s;}
 .nav-cta:hover{background:var(--gold);color:var(--black);}
 
@@ -171,6 +180,8 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
 @media(max-width:900px){
   nav{padding:1.2rem 1.5rem;}
   .nav-links{display:none;}
+  .nav-toggle{display:flex;}
+  .mobile-menu{display:flex;}
   section{padding:4rem 1.5rem;}
   .stats{grid-template-columns:1fr;padding:3rem 1.5rem;}
   .stat{border-right:none;border-bottom:1px solid rgba(201,176,116,.15);padding:1.5rem;}
@@ -196,7 +207,17 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
   <a href="contacto.html" class="nav-cta" style="text-decoration:none;">Escríbenos</a>
+  <button class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.toggle('open');this.classList.toggle('open');" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu">
+  <a href="index.html#nosotros">Nosotros</a>
+  <a href="propiedades.html">Propiedades</a>
+  <a href="zonas.html">Zonas</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="contacto.html" class="nav-cta" style="text-decoration:none;margin-top:1rem;">Escríbenos</a>
+</div>
 
 <!-- HERO ZONAS -->
 <section class="hero" style="min-height:40vh;padding:8rem 4rem 4rem;">
@@ -207,9 +228,9 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
 
 <!-- ZONAS -->
 <section id="zonas">
-  <p class="section-eyebrow">Conoce la ciudad</p>
+  <p class="section-eyebrow">Explora</p>
   <h2 class="section-title">¿En qué zona de Cali<br/>está <em>tu lugar?</em></h2>
-  <p class="section-body">Cada zona de Cali tiene su propia personalidad. Te ayudamos a encontrar la que mejor se ajusta a tu estilo de vida.</p>
+  <p class="section-body">Compara ubicación, estilo de vida y valorización antes de decidir dónde invertir.</p>
   <div class="zonas-grid">
     <div class="zona-card">
       <div class="zona-num">01</div>
