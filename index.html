@@ -60,6 +60,15 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display
 .nav-links{display:flex;gap:2.5rem;list-style:none;}
 .nav-links a{color:var(--white-muted);text-decoration:none;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;transition:color .3s;}
 .nav-links a:hover{color:var(--gold);}
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:28px;height:22px;background:none;border:none;cursor:pointer;padding:0;z-index:200;position:relative;}
+.nav-toggle span{display:block;height:1px;width:100%;background:var(--gold);transition:transform .3s,opacity .3s;}
+.nav-toggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.mobile-menu{display:none;flex-direction:column;align-items:center;gap:1.8rem;background:rgba(10,10,10,.98);border-bottom:1px solid rgba(201,176,116,.15);padding:0;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;position:sticky;top:0;z-index:99;}
+.mobile-menu a{color:var(--white-muted);text-decoration:none;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;}
+.mobile-menu a:hover{color:var(--gold);}
+.mobile-menu.open{max-height:400px;padding:2rem 1.5rem;}
 .nav-cta{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:.6rem 1.6rem;font-family:var(--sans);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .3s;}
 .nav-cta:hover{background:var(--gold);color:var(--black);}
 
@@ -83,6 +92,9 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display
 .stat:last-child{border-right:none;}
 .stat-num{font-family:var(--serif);font-size:3.5rem;font-weight:300;color:var(--gold);line-height:1;}
 .stat-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white-muted);margin-top:.5rem;}
+.explora-box{border:1px solid rgba(201,176,116,.2);transition:border-color .3s,background .3s;animation:goldPulse 3.6s ease-in-out infinite;}
+.explora-box:hover{animation-play-state:paused;border-color:rgba(201,176,116,.7);background:rgba(201,176,116,.05);}
+@keyframes goldPulse{0%,100%{border-color:rgba(201,176,116,.18);box-shadow:0 0 0 rgba(201,176,116,0);background:transparent;}50%{border-color:rgba(201,176,116,.6);box-shadow:0 0 16px rgba(201,176,116,.25);background:rgba(201,176,116,.035);}}
 
 /* SECTION BASE */
 section{padding:6rem 4rem;}
@@ -171,6 +183,8 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
 @media(max-width:900px){
   nav{padding:1.2rem 1.5rem;}
   .nav-links{display:none;}
+  .nav-toggle{display:flex;}
+  .mobile-menu{display:flex;}
   section{padding:4rem 1.5rem;}
   .stats{grid-template-columns:1fr;padding:3rem 1.5rem;}
   .stat{border-right:none;border-bottom:1px solid rgba(201,176,116,.15);padding:1.5rem;}
@@ -196,7 +210,17 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
   <a href="contacto.html" class="nav-cta" style="text-decoration:none;">Escríbenos</a>
+  <button class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.toggle('open');this.classList.toggle('open');" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu">
+  <a href="index.html#nosotros">Nosotros</a>
+  <a href="propiedades.html">Propiedades</a>
+  <a href="zonas.html">Zonas</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="contacto.html" class="nav-cta" style="text-decoration:none;margin-top:1rem;">Escríbenos</a>
+</div>
 <!-- HERO -->
 <section class="hero">
   <p class="hero-eyebrow">Propiedad Raíz en Cali</p>
@@ -270,6 +294,40 @@ const statsObserver = new IntersectionObserver((entries) => {
 statsObserver.observe(document.getElementById('stats-section'));
 </script>
 
+<!-- CTA SECCIONES -->
+<section style="padding:6rem 4rem;background:var(--black-soft);">
+  <div style="text-align:center;margin-bottom:4rem;">
+    <p class="section-eyebrow">Explora</p>
+    <h2 class="section-title" style="font-size:clamp(2.6rem,5.5vw,4.5rem);">¿Qué estás<br/><em>buscando?</em></h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;max-width:900px;margin:0 auto;">
+    <a href="propiedades.html" style="text-decoration:none;">
+      <div class="explora-box" style="animation-delay:0s;padding:2.5rem 2rem;cursor:pointer;">
+        <p style="font-family:var(--serif);font-style:italic;font-size:2.5rem;color:var(--gold);margin-bottom:.75rem;">01</p>
+        <h3 style="font-family:var(--sans);font-size:1rem;letter-spacing:.12em;text-transform:uppercase;color:var(--white);margin-bottom:.75rem;">Propiedades</h3>
+        <p style="font-size:.85rem;color:var(--white-muted);line-height:1.7;">Apartamentos, casas y lotes en Cali y alrededores. Filtra por tipo y presupuesto.</p>
+        <p style="margin-top:1.5rem;font-size:.8rem;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;">Ver propiedades →</p>
+      </div>
+    </a>
+    <a href="zonas.html" style="text-decoration:none;">
+      <div class="explora-box" style="animation-delay:.5s;padding:2.5rem 2rem;cursor:pointer;">
+        <p style="font-family:var(--serif);font-style:italic;font-size:2.5rem;color:var(--gold);margin-bottom:.75rem;">02</p>
+        <h3 style="font-family:var(--sans);font-size:1rem;letter-spacing:.12em;text-transform:uppercase;color:var(--white);margin-bottom:.75rem;">Zonas</h3>
+        <p style="font-size:.85rem;color:var(--white-muted);line-height:1.7;">Conoce los barrios y zonas de Cali. Te ayudamos a elegir la que mejor se adapta a ti.</p>
+        <p style="margin-top:1.5rem;font-size:.8rem;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;">Explorar zonas →</p>
+      </div>
+    </a>
+    <a href="contacto.html" style="text-decoration:none;">
+      <div class="explora-box" style="animation-delay:1s;padding:2.5rem 2rem;cursor:pointer;">
+        <p style="font-family:var(--serif);font-style:italic;font-size:2.5rem;color:var(--gold);margin-bottom:.75rem;">03</p>
+        <h3 style="font-family:var(--sans);font-size:1rem;letter-spacing:.12em;text-transform:uppercase;color:var(--white);margin-bottom:.75rem;">Contacto</h3>
+        <p style="font-size:.85rem;color:var(--white-muted);line-height:1.7;">¿Listo para dar el paso? Escríbenos y te acompañamos en todo el proceso.</p>
+        <p style="margin-top:1.5rem;font-size:.8rem;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;">Escribirnos →</p>
+      </div>
+    </a>
+  </div>
+</section>
+
 <!-- NOSOTROS -->
 <section id="nosotros">
   <div class="nosotros">
@@ -324,39 +382,7 @@ Más info y fotos aquí: https://tulugarencali.com/#prop-${propId}`;
 }
 </script>
 
-<!-- CTA SECCIONES -->
-<section style="padding:6rem 4rem;background:var(--black-soft);">
-  <div style="text-align:center;margin-bottom:4rem;">
-    <p class="section-eyebrow">Explora</p>
-    <h2 class="section-title">¿Qué estás<br/><em>buscando?</em></h2>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;max-width:900px;margin:0 auto;">
-    <a href="propiedades.html" style="text-decoration:none;">
-      <div style="border:1px solid rgba(201,176,116,.2);padding:2.5rem 2rem;transition:all .3s;cursor:pointer;" onmouseover="this.style.borderColor='rgba(201,176,116,.6)';this.style.background='rgba(201,176,116,.04)'" onmouseout="this.style.borderColor='rgba(201,176,116,.2)';this.style.background='transparent'">
-        <p style="font-family:var(--serif);font-style:italic;font-size:2.5rem;color:var(--gold);margin-bottom:.75rem;">01</p>
-        <h3 style="font-family:var(--sans);font-size:1rem;letter-spacing:.12em;text-transform:uppercase;color:var(--white);margin-bottom:.75rem;">Propiedades</h3>
-        <p style="font-size:.85rem;color:var(--white-muted);line-height:1.7;">Apartamentos, casas y lotes en Cali y alrededores. Filtra por tipo y presupuesto.</p>
-        <p style="margin-top:1.5rem;font-size:.8rem;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;">Ver propiedades →</p>
-      </div>
-    </a>
-    <a href="zonas.html" style="text-decoration:none;">
-      <div style="border:1px solid rgba(201,176,116,.2);padding:2.5rem 2rem;transition:all .3s;cursor:pointer;" onmouseover="this.style.borderColor='rgba(201,176,116,.6)';this.style.background='rgba(201,176,116,.04)'" onmouseout="this.style.borderColor='rgba(201,176,116,.2)';this.style.background='transparent'">
-        <p style="font-family:var(--serif);font-style:italic;font-size:2.5rem;color:var(--gold);margin-bottom:.75rem;">02</p>
-        <h3 style="font-family:var(--sans);font-size:1rem;letter-spacing:.12em;text-transform:uppercase;color:var(--white);margin-bottom:.75rem;">Zonas</h3>
-        <p style="font-size:.85rem;color:var(--white-muted);line-height:1.7;">Conoce los barrios y zonas de Cali. Te ayudamos a elegir la que mejor se adapta a ti.</p>
-        <p style="margin-top:1.5rem;font-size:.8rem;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;">Explorar zonas →</p>
-      </div>
-    </a>
-    <a href="contacto.html" style="text-decoration:none;">
-      <div style="border:1px solid rgba(201,176,116,.2);padding:2.5rem 2rem;transition:all .3s;cursor:pointer;" onmouseover="this.style.borderColor='rgba(201,176,116,.6)';this.style.background='rgba(201,176,116,.04)'" onmouseout="this.style.borderColor='rgba(201,176,116,.2)';this.style.background='transparent'">
-        <p style="font-family:var(--serif);font-style:italic;font-size:2.5rem;color:var(--gold);margin-bottom:.75rem;">03</p>
-        <h3 style="font-family:var(--sans);font-size:1rem;letter-spacing:.12em;text-transform:uppercase;color:var(--white);margin-bottom:.75rem;">Contacto</h3>
-        <p style="font-size:.85rem;color:var(--white-muted);line-height:1.7;">¿Listo para dar el paso? Escríbenos y te acompañamos en todo el proceso.</p>
-        <p style="margin-top:1.5rem;font-size:.8rem;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;">Escribirnos →</p>
-      </div>
-    </a>
-  </div>
-</section>
+
 
 <section style="padding:6rem 4rem;background:var(--black);">
   <div style="max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:3rem;align-items:center;">
