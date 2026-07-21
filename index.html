@@ -69,7 +69,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display
 .mobile-menu a{color:var(--white-muted);text-decoration:none;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;}
 .mobile-menu a:hover{color:var(--gold);}
 .mobile-menu.open{max-height:400px;padding:2rem 1.5rem;}
-.nav-cta{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:.6rem 1.6rem;font-family:var(--sans);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .3s;}
+.nav-cta{background:transparent;border:1px solid var(--gold);border-radius:30px;color:var(--gold);padding:.6rem 1.6rem;font-family:var(--sans);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .3s;}
 .nav-cta:hover{background:var(--gold);color:var(--black);}
 
 /* HERO */
@@ -80,7 +80,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display
 .hero h1 em{font-style:italic;color:var(--gold);}
 .hero-sub{font-size:1rem;color:var(--white-muted);letter-spacing:.05em;max-width:480px;line-height:1.8;margin-bottom:3rem;}
 .hero-btns{display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;}
-.btn-primary{background:var(--gold);color:var(--black);padding:.9rem 2.5rem;font-family:var(--sans);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;border:none;font-weight:500;transition:all .3s;}
+.btn-primary{background:var(--gold);color:var(--black);padding:.9rem 2.5rem;font-family:var(--sans);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;border:none;border-radius:30px;font-weight:500;transition:all .3s;}
 .btn-primary:hover{background:var(--gold-light);}
 .btn-outline{background:transparent;color:var(--white);padding:.9rem 2.5rem;font-family:var(--sans);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;border:1px solid rgba(248,245,239,.3);transition:all .3s;}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
@@ -226,6 +226,11 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
   <p class="hero-eyebrow">Propiedad Raíz en Cali</p>
   <h1>Encuentra <em>tu lugar</em><br/>en la ciudad</h1>
   <p class="hero-sub">Somos una empresa familiar caleña dedicada a ayudarte a encontrar la propiedad que se ajusta a tu vida, tu presupuesto y tus sueños.</p>
+  <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:2.5rem;">
+    <span style="font-size:.72rem;letter-spacing:.08em;color:var(--white-muted);display:flex;align-items:center;gap:.5rem;"><span style="width:5px;height:5px;border-radius:50%;background:var(--gold);"></span>Más de 20 años en el sector</span>
+    <span style="font-size:.72rem;letter-spacing:.08em;color:var(--white-muted);display:flex;align-items:center;gap:.5rem;"><span style="width:5px;height:5px;border-radius:50%;background:var(--gold);"></span>Acompañamiento personalizado</span>
+    <span style="font-size:.72rem;letter-spacing:.08em;color:var(--white-muted);display:flex;align-items:center;gap:.5rem;"><span style="width:5px;height:5px;border-radius:50%;background:var(--gold);"></span>Sin letra pequeña</span>
+  </div>
   <div class="hero-btns">
     <a href="contacto.html" class="btn-primary" style="text-decoration:none;display:inline-block;">Habla con un asesor</a>
   </div>
