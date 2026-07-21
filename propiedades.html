@@ -69,7 +69,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display
 .mobile-menu a{color:var(--white-muted);text-decoration:none;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;}
 .mobile-menu a:hover{color:var(--gold);}
 .mobile-menu.open{max-height:400px;padding:2rem 1.5rem;}
-.nav-cta{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:.6rem 1.6rem;font-family:var(--sans);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .3s;}
+.nav-cta{background:transparent;border:1px solid var(--gold);border-radius:30px;color:var(--gold);padding:.6rem 1.6rem;font-family:var(--sans);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .3s;}
 .nav-cta:hover{background:var(--gold);color:var(--black);}
 
 /* HERO */
@@ -80,7 +80,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display
 .hero h1 em{font-style:italic;color:var(--gold);}
 .hero-sub{font-size:1rem;color:var(--white-muted);letter-spacing:.05em;max-width:480px;line-height:1.8;margin-bottom:3rem;}
 .hero-btns{display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;}
-.btn-primary{background:var(--gold);color:var(--black);padding:.9rem 2.5rem;font-family:var(--sans);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;border:none;font-weight:500;transition:all .3s;}
+.btn-primary{background:var(--gold);color:var(--black);padding:.9rem 2.5rem;font-family:var(--sans);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;border:none;border-radius:30px;font-weight:500;transition:all .3s;}
 .btn-primary:hover{background:var(--gold-light);}
 .btn-outline{background:transparent;color:var(--white);padding:.9rem 2.5rem;font-family:var(--sans);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;border:1px solid rgba(248,245,239,.3);transition:all .3s;}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
@@ -127,6 +127,7 @@ section{padding:6rem 4rem;}
 .prop-precio{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--gold);}
 .prop-detalles{display:flex;gap:1rem;margin-top:.75rem;padding-top:.75rem;border-top:1px solid rgba(201,176,116,.1);}
 .prop-det{font-size:.75rem;color:var(--white-muted);}
+.prop-desc{font-size:.8rem;color:var(--white-muted);line-height:1.5;margin-top:.75rem;}
 
 /* ZONAS */
 .zonas-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:3rem;}
@@ -318,6 +319,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span class="prop-det">·</span>
           <span class="prop-det">Balcón</span>
         </div>
+        <p class="prop-desc">Apartamento a estrenar con balcón y un espacio de estudio independiente, ideal para trabajar desde casa. El conjunto cuenta con ascensor, parqueadero y piscina.</p>
         <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem;">
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Ascensor</span>
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Parqueadero</span>
@@ -328,7 +330,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span style="font-size:.65rem;background:rgba(201,176,116,.15);color:var(--gold);padding:.3rem .8rem;border-radius:20px;letter-spacing:.08em;">● Disponible</span>
           <span style="font-size:.7rem;color:var(--white-muted);">Publicado: Mayo 2026</span>
         </div>
-        <button onclick="compartirPropiedad('Ciudad Meléndez', 'Sur de Cali · Piso 3', '\$245.000.000', 'melendez')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
+        <button onclick="compartirPropiedad('Ciudad Meléndez', 'Apartamento · Nuevo', 'Sur de Cali · Ciudad Meléndez · Piso 3', '\$245.000.000', '2 hab. + estudio · 62 m² · Balcón', 'melendez')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
           <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Compartir
         </button>
@@ -379,6 +381,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span class="prop-det">·</span>
           <span class="prop-det">86 m²</span>
         </div>
+        <p class="prop-desc">Amplio apartamento familiar con habitación de servicio, depósito y dos parqueaderos — pensado para quienes buscan espacio y comodidad en una zona central.</p>
         <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem;">
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">2 Parqueaderos</span>
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Depósito</span>
@@ -389,7 +392,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span style="font-size:.65rem;background:rgba(201,176,116,.15);color:var(--gold);padding:.3rem .8rem;border-radius:20px;letter-spacing:.08em;">● Disponible</span>
           <span style="font-size:.7rem;color:var(--white-muted);">Publicado: Mayo 2026</span>
         </div>
-        <button onclick="compartirPropiedad('Santa Anita', 'Sur Central · Barrio Santa Anita', '\$380.000.000 negociables', 'santaanita')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
+        <button onclick="compartirPropiedad('Santa Anita', 'Apartamento · Usado - Buen estado', 'Sur Central · Barrio Santa Anita', '\$380.000.000 negociables', '3 hab. · 3 baños · 86 m²', 'santaanita')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
           <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Compartir
         </button>
@@ -420,7 +423,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
     }
     santaAnitaRenderDots();
     </script>
-    <div class="prop-card" id="prop-sanemigdio" data-cat="lotes" data-precio="850000000">
+    <div class="prop-card" id="prop-sanemigdio" data-cat="lotes" data-precio="240000000">
       <div class="prop-img" style="position:relative;overflow:hidden;background:#111;cursor:pointer;">
         <img id="lote-img" src="https://res.cloudinary.com/dizatx3dd/image/upload/f_auto,q_auto,w_800/v1779738394/se_ds2rgb.jpg" alt="Lote San Emigdio" style="width:100%;height:100%;object-fit:cover;transition:opacity .3s;"/>
         <div class="prop-tag" style="background:#5C4A1E;">Oportunidad</div>
@@ -429,24 +432,24 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
         <div style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:4px;" id="lote-dots"></div>
       </div>
       <div class="prop-info">
-        <p class="prop-tipo">Lote · Nuevo</p>
+        <p class="prop-tipo">Lotes · Nuevo</p>
         <h3 class="prop-nombre">San Emigdio · Potrerillo</h3>
         <p class="prop-zona">Palmira · Frente al vivero CVC</p>
-        <p class="prop-precio">$850.000.000</p>
+        <p class="prop-precio">$240.000.000 <span style="font-size:.8rem;color:var(--white-muted);font-family:var(--sans);">cada lote</span></p>
         <div class="prop-detalles">
-          <span class="prop-det">12.400 m²</span>
+          <span class="prop-det">3.000 m² c/u</span>
           <span class="prop-det">·</span>
           <span class="prop-det">Vivienda campestre</span>
         </div>
+        <p class="prop-desc">Se venden lotes campestres de 3.000 m², frente al vivero CVC, ideales para construir tu vivienda de descanso.</p>
         <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem;">
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Proyecto campestre</span>
-          <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">También 3.000m² x $300M</span>
         </div>
         <div style="margin-top:1rem;padding-top:.75rem;border-top:1px solid rgba(201,176,116,.1);display:flex;justify-content:space-between;align-items:center;">
           <span style="font-size:.65rem;background:rgba(201,176,116,.15);color:var(--gold);padding:.3rem .8rem;border-radius:20px;letter-spacing:.08em;">● Disponible</span>
           <span style="font-size:.7rem;color:var(--white-muted);">Publicado: Mayo 2026</span>
         </div>
-        <button onclick="compartirPropiedad('San Emigdio · Potrerillo', 'Palmira · Frente al vivero CVC', '\$850.000.000', 'sanemigdio')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
+        <button onclick="compartirPropiedad('San Emigdio · Potrerillo', 'Lotes · Nuevo', 'Palmira · Frente al vivero CVC', '\$240.000.000 cada lote', '3.000 m² c/u · Vivienda campestre', 'sanemigdio')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
           <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Compartir
         </button>
@@ -493,6 +496,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span class="prop-det">·</span>
           <span class="prop-det">Balcón</span>
         </div>
+        <p class="prop-desc">Apartamento con cocina integral y balcón, en un conjunto con piscina para toda la familia, salón social y parqueadero propio.</p>
         <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem;">
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Parqueadero propio</span>
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Piscina adultos y niños</span>
@@ -504,7 +508,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span style="font-size:.65rem;background:rgba(201,176,116,.15);color:var(--gold);padding:.3rem .8rem;border-radius:20px;letter-spacing:.08em;">● Disponible</span>
           <span style="font-size:.7rem;color:var(--white-muted);">Publicado: Junio 2026</span>
         </div>
-        <button onclick="compartirPropiedad('Ciudad 2000', 'Cali · Piso 4', '\$220.000.000 negociables', 'ciudad2000')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
+        <button onclick="compartirPropiedad('Ciudad 2000', 'Apartamento · Usado - Buen estado', 'Cali · Piso 4', '\$220.000.000 negociables', '3 hab. · 65.7 m² · Balcón', 'ciudad2000')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
           <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Compartir
         </button>
@@ -551,6 +555,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span class="prop-det">·</span>
           <span class="prop-det">70 m² c/u</span>
         </div>
+        <p class="prop-desc">Dos lotes urbanos sobre la vía Potrerito, listos para desarrollar tu proyecto de vivienda en Jamundí.</p>
         <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem;">
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Ideal para proyecto de vivienda</span>
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Vía Potrerito</span>
@@ -559,7 +564,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span style="font-size:.65rem;background:rgba(201,176,116,.15);color:var(--gold);padding:.3rem .8rem;border-radius:20px;letter-spacing:.08em;">● Disponible</span>
           <span style="font-size:.7rem;color:var(--white-muted);">Publicado: Junio 2026</span>
         </div>
-        <button onclick="compartirPropiedad('Lotes Urbanización El Edén', 'Jamundí · Vía Potrerito', '\$60.000.000 cada lote', 'jamundi')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
+        <button onclick="compartirPropiedad('Lotes Urbanización El Edén', 'Lote · Proyecto de vivienda', 'Jamundí · Vía Potrerito', '\$60.000.000 cada lote', '2 lotes · 70 m² c/u', 'jamundi')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
           <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Compartir
         </button>
@@ -608,6 +613,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span class="prop-det">·</span>
           <span class="prop-det">Media terraza</span>
         </div>
+        <p class="prop-desc">Casa de dos niveles en zona central de Tequendama, con buen potencial de renta y ubicación estratégica.</p>
         <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem;">
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Genera rentabilidad</span>
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Zona central</span>
@@ -616,7 +622,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span style="font-size:.65rem;background:rgba(201,176,116,.15);color:var(--gold);padding:.3rem .8rem;border-radius:20px;letter-spacing:.08em;">● Disponible</span>
           <span style="font-size:.7rem;color:var(--white-muted);">Publicado: Junio 2026</span>
         </div>
-        <button onclick="compartirPropiedad('Casa Tequendama', 'Tequendama · Cali', '\$740.000.000', 'tequendama')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
+        <button onclick="compartirPropiedad('Casa Tequendama', 'Casa · 2 niveles', 'Tequendama · Cali', '\$740.000.000', '160 m² lote · 2 niveles · Media terraza', 'tequendama')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
           <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Compartir
         </button>
@@ -669,6 +675,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span class="prop-det">·</span>
           <span class="prop-det">Vista panorámica</span>
         </div>
+        <p class="prop-desc">Amplio apartamento remodelado con vista panorámica y excelente luz natural. La alcoba principal tiene vestier, hay habitación de servicio, dos parqueaderos en sótano y zonas comunes con lobby, piscina y sauna turco.</p>
         <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem;">
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Habitación principal con vestier</span>
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Habitación de servicio</span>
@@ -680,7 +687,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span style="font-size:.65rem;background:rgba(201,176,116,.15);color:var(--gold);padding:.3rem .8rem;border-radius:20px;letter-spacing:.08em;">● Disponible</span>
           <span style="font-size:.7rem;color:var(--white-muted);">Publicado: Junio 2026</span>
         </div>
-        <button onclick="compartirPropiedad('Apartamento Alférez Real', 'Oeste de Cali · Piso 18', '\$1.500.000.000', 'alferez')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
+        <button onclick="compartirPropiedad('Apartamento Alférez Real', 'Apartamento · Remodelado · Amoblado', 'Oeste de Cali · Piso 18', '\$1.500.000.000', '4 hab. · 195 m² · Vista panorámica', 'alferez')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
           <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Compartir
         </button>
@@ -740,6 +747,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span class="prop-det">·</span>
           <span class="prop-det">1.250 m² lote</span>
         </div>
+        <p class="prop-desc">Casa campestre con piscina propia, doble garaje y amplio lote — perfecta para descansar en familia o como finca de fin de semana.</p>
         <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem;">
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Alcoba ppal con vestier y baño</span>
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Piscina</span>
@@ -751,7 +759,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span style="font-size:.65rem;background:rgba(201,176,116,.15);color:var(--gold);padding:.3rem .8rem;border-radius:20px;letter-spacing:.08em;">● Disponible</span>
           <span style="font-size:.7rem;color:var(--white-muted);">Publicado: Junio 2026</span>
         </div>
-        <button onclick="compartirPropiedad('Casa Vereda Lomitas', 'Pradera · A 4 km del parque', '\$650.000.000 negociables', 'pradera')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
+        <button onclick="compartirPropiedad('Casa Vereda Lomitas', 'Casa + Lote · Campo', 'Pradera · A 4 km del parque', '\$650.000.000 negociables', '3 hab. · 300 m² const. · 1.250 m² lote', 'pradera')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
           <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Compartir
         </button>
@@ -798,6 +806,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span class="prop-det">·</span>
           <span class="prop-det">3 pisos</span>
         </div>
+        <p class="prop-desc">Casa campestre de lujo con piscina, jacuzzi y quiosco estadero totalmente dotado. Tiene ascensor, paneles solares, planta eléctrica y una alcoba principal tipo suite — pensada para quienes buscan exclusividad y tranquilidad.</p>
         <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem;">
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Piscina y jacuzzi</span>
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Quiosco estadero dotado</span>
@@ -812,7 +821,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span style="font-size:.65rem;background:rgba(201,176,116,.15);color:var(--gold);padding:.3rem .8rem;border-radius:20px;letter-spacing:.08em;">● Disponible</span>
           <span style="font-size:.7rem;color:var(--white-muted);">Publicado: Julio 2026</span>
         </div>
-        <button onclick="compartirPropiedad('Casa Campestre de Lujo', 'Jamundí · Zona campestre', '\$6.000.000.000 negociables', 'campestre')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
+        <button onclick="compartirPropiedad('Casa Campestre de Lujo', 'Casa campestre · Estrato 6 · Lujo', 'Jamundí · Zona campestre', '\$6.000.000.000 negociables', '4 hab. · 5 baños · 3 pisos', 'campestre')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
           <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Compartir
         </button>
@@ -876,6 +885,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span class="prop-det">·</span>
           <span class="prop-det">80 m²</span>
         </div>
+        <p class="prop-desc">Apartamento completamente remodelado con acabados nuevos y parqueadero techado propio.</p>
         <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem;">
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Todo completamente nuevo</span>
           <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Parqueadero techado propio y escriturado</span>
@@ -885,7 +895,7 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
           <span style="font-size:.65rem;background:rgba(201,176,116,.15);color:var(--gold);padding:.3rem .8rem;border-radius:20px;letter-spacing:.08em;">● Disponible</span>
           <span style="font-size:.7rem;color:var(--white-muted);">Publicado: Julio 2026</span>
         </div>
-        <button onclick="compartirPropiedad('El Lido · Los Cerros', 'El Lido · Conjunto Residencial Los Cerros · Piso 2', '\$295.000.000', 'ellido')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
+        <button onclick="compartirPropiedad('El Lido · Los Cerros', 'Apartamento · Remodelado', 'El Lido · Conjunto Residencial Los Cerros · Piso 2', '\$295.000.000', '3 hab. · 2 baños · 80 m²', 'ellido')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
           <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Compartir
         </button>
@@ -991,14 +1001,20 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
 
 <script>
 // Compartir propiedad por WhatsApp
-function compartirPropiedad(nombre, zona, precio, propId) {
-  const texto = `Hola! Te comparto esta propiedad de Tu Lugar en Cali:
+function compartirPropiedad(nombre, tipo, zona, precio, detalles, propId) {
+  const texto = `🏡 *Tu Lugar en Cali*
 
-• *${nombre}*
-• ${zona}
-• ${precio}
+*${nombre}*
+_${tipo}_
 
-Más info y fotos aquí: https://tulugarencali.com/propiedades.html#prop-${propId}`;
+📍 ${zona}
+💰 ${precio}
+📐 ${detalles}
+
+Más información y fotos completas aquí:
+https://tulugarencali.com/propiedades.html#prop-${propId}
+
+¿Hablamos? Escríbenos y te acompañamos en todo el proceso.`;
   const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(texto)}`;
   window.open(url, '_blank');
 }
