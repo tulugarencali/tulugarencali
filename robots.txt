@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /compartir/
+
+Sitemap: https://tulugarencali.com/sitemap.xml
