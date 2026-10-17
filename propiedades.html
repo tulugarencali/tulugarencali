@@ -364,6 +364,68 @@ footer{padding:3rem 4rem;border-top:1px solid rgba(201,176,116,.15);display:flex
     }
     pangolaRenderDots();
     </script>
+    <div class="prop-card" id="prop-pangola2" data-cat="apartamentos" data-precio="250000000" style="border:1px solid rgba(201,176,116,.45);position:relative;">
+      <div style="position:absolute;top:0;left:0;right:0;background:var(--gold);color:var(--black);text-align:center;font-size:.7rem;font-family:var(--sans);letter-spacing:.15em;text-transform:uppercase;padding:.35rem;font-weight:500;z-index:10;">⭐ Destacado — Oportunidad</div>
+      <div class="prop-img" style="position:relative;overflow:hidden;background:#111;cursor:pointer;margin-top:2rem;">
+        <img id="pangola2-img" src="https://res.cloudinary.com/dizatx3dd/image/upload/f_auto,q_auto,w_800/v1792205753/41c58a52-fc25-4a6b-a50d-0bf8fe3fb959_yiqide.jpg" alt="Apartamento Campos de Pangola Piso 8" style="width:100%;height:100%;object-fit:cover;transition:opacity .3s;"/>
+        <div class="prop-tag">En venta</div>
+        <button onclick="pangola2Slide(-1)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(201,176,116,.3);color:#C9B074;font-size:1.3rem;width:32px;height:32px;cursor:pointer;line-height:1;">‹</button>
+        <button onclick="pangola2Slide(1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(201,176,116,.3);color:#C9B074;font-size:1.3rem;width:32px;height:32px;cursor:pointer;line-height:1;">›</button>
+        <div style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:4px;" id="pangola2-dots"></div>
+      </div>
+      <div class="prop-info">
+        <p class="prop-tipo">Apartamento · Nuevo - Full acabados</p>
+        <h3 class="prop-nombre">Campos de Pangola</h3>
+        <p class="prop-zona">Conjunto Campos de Pangola · Piso 8</p>
+        <p class="prop-precio">$250.000.000 <span style="font-size:.8rem;color:var(--white-muted);font-family:var(--sans);">negociables</span></p>
+        <div class="prop-detalles">
+          <span class="prop-det">2 hab. + espacio múltiple</span>
+          <span class="prop-det">·</span>
+          <span class="prop-det">2 baños</span>
+          <span class="prop-det">·</span>
+          <span class="prop-det">64.92 m²</span>
+        </div>
+        <p class="prop-desc">Apartamento nuevo con full acabados en porcelanato, cocina integral (estufa, horno y campana), luminarias y lámparas colgantes en barra de cocina. Closet y vestier en madera en alcoba principal. Estrato 4, garaje descubierto asignado por escritura (no paga predial). Administración: $270.000/mes.</p>
+        <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.4rem;">
+          <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Garaje escriturado</span>
+          <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Cocina integral</span>
+          <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Full acabados</span>
+          <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Año 2024</span>
+          <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Estrato 4</span>
+          <span style="font-size:.65rem;border:1px solid rgba(201,176,116,.25);color:var(--gold);padding:.2rem .6rem;">Sala-comedor</span>
+        </div>
+        <div style="margin-top:1rem;padding-top:.75rem;border-top:1px solid rgba(201,176,116,.1);display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:.65rem;background:rgba(201,176,116,.15);color:var(--gold);padding:.3rem .8rem;border-radius:20px;letter-spacing:.08em;">● Disponible</span>
+          <span style="font-size:.7rem;color:var(--white-muted);">Publicado: Oct. 2026</span>
+        </div>
+        <button onclick="compartirPropiedad('Campos de Pangola', 'Apartamento · Nuevo - Full acabados', 'Conjunto Campos de Pangola · Piso 8', '\$250.000.000 negociables', '2 hab. + espacio múltiple · 2 baños · 64.92 m²', 'pangola2')" style="margin-top:.75rem;width:100%;background:transparent;border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.6rem;font-size:.75rem;letter-spacing:.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .3s;" onmouseover="this.style.background='rgba(37,211,102,.1)'" onmouseout="this.style.background='transparent'">
+          <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Compartir
+        </button>
+      </div>
+    </div>
+    <script>
+    const pangola2Fotos = [
+      "https://res.cloudinary.com/dizatx3dd/image/upload/f_auto,q_auto,w_800/v1792205753/41c58a52-fc25-4a6b-a50d-0bf8fe3fb959_yiqide.jpg",
+      "https://res.cloudinary.com/dizatx3dd/image/upload/f_auto,q_auto,w_800/v1792205619/ecf9b7c1-4d9d-475b-bd8c-e45373062aa0_w4shiv.jpg",
+      "https://res.cloudinary.com/dizatx3dd/image/upload/f_auto,q_auto,w_800/v1792205649/62f7d624-fc59-4f69-aeae-c69c62fa03fa_bbnzlz.jpg",
+      "https://res.cloudinary.com/dizatx3dd/image/upload/f_auto,q_auto,w_800/v1792205675/4ee2afae-5143-45a9-bc1c-d69ce519118b_temo8l.jpg",
+      "https://res.cloudinary.com/dizatx3dd/image/upload/f_auto,q_auto,w_800/v1792205694/e506e928-74fc-4d4a-959c-2002ff87be77_szswve.jpg"
+    ];
+    let pangola2Idx = 0;
+    function pangola2RenderDots(){
+      const d = document.getElementById('pangola2-dots');
+      if(!d) return;
+      d.innerHTML = pangola2Fotos.map((_,i) => `<div style="width:6px;height:6px;border-radius:50%;background:${i===pangola2Idx?'#C9B074':'rgba(255,255,255,.3)'};transition:background .3s;"></div>`).join('');
+    }
+    function pangola2Slide(dir){
+      pangola2Idx = (pangola2Idx + dir + pangola2Fotos.length) % pangola2Fotos.length;
+      const img = document.getElementById('pangola2-img');
+      if(img){ img.style.opacity='.4'; setTimeout(()=>{ img.src=pangola2Fotos[pangola2Idx]; img.style.opacity='1'; },100); }
+      pangola2RenderDots();
+    }
+    pangola2RenderDots();
+    </script>
     <div class="prop-card" id="prop-melendez" data-cat="apartamentos" data-precio="245000000">
       <div class="prop-img" style="position:relative;overflow:hidden;background:#111;cursor:pointer;">
         <img id="melendez-img" src="https://res.cloudinary.com/dizatx3dd/image/upload/f_auto,q_auto,w_800/v1779738845/cm1_hqbwqu.jpg" alt="Apartamento Ciudad Meléndez" style="width:100%;height:100%;object-fit:cover;transition:opacity .3s;" onerror="this.style.display='none';document.getElementById('melendez-fallback').style.display='flex';"/>
